@@ -1,0 +1,208 @@
+.jumbotron{
+    font-size: 20px;
+    padding: 60px;
+    background-color: #14C38E;
+    text-align: center;
+    color:  whitesmoke;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+header{
+    display: inline;
+}
+
+nav{
+    position: sticky;
+    padding: 0 10px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
+    color: #fff;
+}
+
+ul{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.menu{
+    display: inline;
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li{
+    padding: 15px 14px;
+    box-sizing: content-box;
+}
+
+.menu li:hover{
+    font-weight: bold;
+    background-color: #99C4C8;
+    /* padding-left: 12px;
+    padding-right: 9px; */
+}
+
+.wisata{
+    position: relative;
+}
+
+.dropdown {
+    background-color: rgb(1, 139, 139);
+    margin: 0;
+    padding: 0;
+    position: absolute; 
+    /* WITH RESPECT TO PARENT WISATA */
+    display: none;
+    border-radius: 8px;
+    right: 0%;
+    top: 45px;
+}
+
+.wisata:hover .dropdown {
+    display: block;
+    list-style-type: none;
+    user-select: contain;
+   }
+
+main{
+    background-color: #E3FCBF;
+    padding: 20px;
+    padding-bottom: 550px;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    float: right;
+    flex-basis: 25%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+#aside{
+    background-color: white;
+}
+
+th{
+    text-align: left;
+}
+
+#content{
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.profile img{
+    width: 200px;
+    border-radius: 50px;
+}
+
+h2 img {
+    width: 300px;
+}
+
+img{
+    width: 500px;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+}
+.active:before {
+    content: "\2796";
+  }
+
+.inactive::before{
+    content: '\02795';
+}
+
+.wisataContent{
+    display: none;
+}
+
+section h3{
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
+
+#content h2{
+    border-bottom: solid black;
+}
+
+footer{
+    padding: 20px;
+    color: white;
+    background-color: teal;
+    text-align: center;
+    font-weight: bold;
+}
+
+article{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+    #content, aside{
+        flex-basis: 100%;
+        padding: 0;
+    }
+
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color:teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .dropdown{
+        position: relative;
+        left: 0;
+        right: 0;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover{
+        background-color: #4c9e9e;
+    }
+}

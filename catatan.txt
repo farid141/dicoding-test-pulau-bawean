@@ -1,0 +1,3 @@
+Fitur pada website:
+javascript pada sub judul wisata, toggle content
+responsive (css media query)
